@@ -14,7 +14,7 @@ public class HelloWorldApplication {
 		SpringApplication.run(HelloWorldApplication.class, args);
 	}
 
-	@GetMapping
+	@GetMapping("/hello")
 	public String hello() {
 		return "Hello World";
 	}
