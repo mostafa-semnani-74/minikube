@@ -2,7 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
+  labels:
+    app: myapp
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myapp
@@ -13,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: hello-world-myapp
+        image: hello
         imagePullPolicy: Never
         resources:
           limits:
